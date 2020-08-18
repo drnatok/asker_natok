@@ -21,10 +21,11 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" minlength="2" maxlength="30" placeholder="Имя" pattern="([А-ЯЁ][а-яё]+(\-[А-ЯЁ][а-яё]+)?)g" required/>
+                        <input class="form__input" type="text" name="name" minlength="2" maxlength="30" placeholder="Имя" pattern="^[А-ЯЁ][а-яё]*(-[А-ЯЁ][а-яё]*)*$" required/>
+                        <span class="form__error">Ваше имя с большой буквы</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="email" pattern="^(([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6})i"  placeholder="E-Mail" required/> <!--  --> 
+                        <input class="form__input" type="text" name="email" pattern="^(([A-Za-z0-9_-]+\.)*[A-Za-z0-9_-]+@A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+)*\.[A-Za-z]{2,6})"  placeholder="E-Mail" required/> <!--  --> 
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
@@ -41,3 +42,4 @@
     </main>     
 </body>
 </html>
+
